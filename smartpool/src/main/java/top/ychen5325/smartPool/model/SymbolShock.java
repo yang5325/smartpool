@@ -26,30 +26,18 @@ public class SymbolShock {
 
     String symbol;
     /**
-     * 根据算法计算得到的震频值
+     * Frequency values and key quantitative indicators calculated according to the algorithm
      */
     double ShockVal;
 
-    /**
-     * 震荡区间的振幅绝对值
-     */
+
     BigDecimal incRate;
 
-    /**
-     * 震荡区间
-     */
+
     BigDecimal maxPrice;
     BigDecimal minPrice;
 
 
-    /**
-     * 最后得到的推荐指数 尚未成熟
-     */
-    double recomRatio;
-
-    /**
-     * 局部均值方差
-     */
     double meanVariance;
 }
 

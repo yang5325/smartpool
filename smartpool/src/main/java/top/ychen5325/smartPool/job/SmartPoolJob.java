@@ -46,20 +46,19 @@ public class SmartPoolJob {
     }
 
     /**
-     * 每小时一次
+     * Once every hour
      */
     @Scheduled(initialDelay = 2 * 1000, fixedRate = 60 * 60 * 1000)
     public void executor() {
         List<String> symbols = smartPoolService.listContractSymbol();
         for (IntervalEnum period : IntervalEnums) {
-            // 传入币种列表和周期获取其计算结果
+            // Pass in the currency list and period to get the calculation result
             List<SymbolShock> symbolShockList = smartPoolService.shockAnalyzeHandler(symbols, period);
             symbolShockPoolCache.put(period, symbolShockList);
-            // 针对计算结果在指定周期内进行月化回测
-            List<String> backTestPool = backTestService.backTestHandler(period, symbolShockList);
-            // 更新缓存
-            symbolBackTestPoolCache.put(period, backTestPool);
-            log.info("周期:{},震荡池回测池更新成。。。", period.toString());
+            // Monthly back-testing of calculation results within a specified period
+            // List<String> backTestPool = backTestService.backTestHandler(period, symbolShockList);
+            // refresh cache
+            // symbolBackTestPoolCache.put(period, backTestPool);
         }
     }
 }
