@@ -1,2 +1,3 @@
 # smartpool
-Quantitative trading, defi, machine gun pool &amp; aggregator If you are keen to use grid strategy as an investment method, but do not know which investment target to choose, please check here
+Quantitative trading, digital currency, defi, machine gun pool & aggregator, if you are keen to use grid strategy as an investment method, but do not know which investment target to choose, please check here.
+This project allows to quantify the shock state of digital currencies such as btc, and then output a shock state ranking list. We can choose the appropriate investment target according to the list currency to carry out grid arbitrage
